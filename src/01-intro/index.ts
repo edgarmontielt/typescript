@@ -48,7 +48,10 @@ let union: any = str + numValue
 // let add = value + 10 //-> da error
 
 
-/** Objects */
+/**
+ *  
+ * Objects 
+ * */
 
 class Person {
     // name: string
@@ -66,6 +69,7 @@ class Person {
             // number: number,
             // numInt?: number, // ? -> optional value
             // [key: number]: boolean // cualquier tipo de propiedades numericas que sean boolean
+            // Index signature: varios elementos que cumplan con la condición
             [key: string]: string // cualquier propiedad en str que almacene str
         } // public es un atajo a this.address
     ) {
@@ -103,3 +107,20 @@ interface Types {
 edgar.name
 
 obj.name
+obj.address.number
+
+let user: User = {
+    name: 'edgar'
+}
+
+interface User {
+    readonly name: string, // readonly -> se refiere a una propiedad de solo lectura
+}
+
+// user.name = 'Paco' // da error si usamos readonly
+
+// Omitir definir objetos vacíos
+// let exampleObject:object
+let exampleObject:{}
+exampleObject = []
+exampleObject = 2 
