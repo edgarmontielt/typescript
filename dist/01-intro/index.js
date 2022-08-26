@@ -66,9 +66,12 @@ let obj = {
 edgar.name;
 obj.name;
 obj.address.number;
-let user = {
-    name: 'edgar'
-};
+// let user: User = {
+//     name: 'edgar'
+// }
+// interface User {
+//     readonly name: string, // readonly -> se refiere a una propiedad de solo lectura
+// }
 // user.name = 'Paco' // da error si usamos readonly
 // Omitir definir objetos vacíos
 // let exampleObject:object
