@@ -175,6 +175,15 @@ let [one, two, ...rest] = numbersIterator
 
 // TODO: crear un iterable con los primeros 10 numeros de la serie de fibonacci
 
+let fibonacciIterator = {
+    *[Symbol.iterator]() {
+        for (let i = 0; i < 10; i++) {
+            let aux = i
+            let b = aux
+        }
+    }
+}
+
 // Call signatures: 
 // function: es un tipo que describe todas las funciones
 console.log(typeof greet) // (name: string) => string
