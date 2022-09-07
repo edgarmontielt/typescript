@@ -112,17 +112,27 @@ arrayIterable[Symbol.iterator];
 let allNumbersIterator = [...numbersIterator];
 let [one, two, ...rest] = numbersIterator;
 // TODO: crear un iterable con los primeros 10 numeros de la serie de fibonacci
+let fibonacciIterator = {
+    *[Symbol.iterator]() {
+        for (let i = 0; i < 10; i++) {
+            let aux = i;
+            let b = aux;
+        }
+    }
+};
 // Call signatures: 
 // function: es un tipo que describe todas las funciones
 console.log(typeof greet); // (name: string) => string
 function showDate(callback) {
     // callback(new Date().toISOString())
     // callback('Hello', new Date())
-    callback('Hello', new Date(), 'abc123');
+    callback('Hello', new Date(), 12, 'abc123');
 }
 // Contextual typing
 showDate((message, numberOrDate, id) => {
-    console.log(message, numberOrDate, id);
+    console.log(message, numberOrDate, id); // -> Hello 2022-08-31T00:05:31.003Z 12
+    console.log(message, numberOrDate, id); // -> Hello 2022-08-31T00:05:31.003Z abc123
 });
 // arrayIterable.map((n: number) => n * 2)
 arrayIterable.map(n => n * 2);
+// TODO: Investigar sobre polimorfismo y generics
